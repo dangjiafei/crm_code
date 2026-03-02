@@ -1027,3 +1027,292 @@ td {
     padding: 24px;
     margin-bottom: 20px;
 }
+
+/* 统计卡片样式 */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-card h3 {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin: 0 0 12px 0;
+}
+
+.stat-card p {
+    margin: 0;
+}
+
+.stat-card .stat-value {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.stat-card .stat-change {
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.stat-card .stat-change.positive {
+    color: #4ade80;
+}
+
+.stat-card .stat-change.negative {
+    color: #ef4444;
+}
+
+/* 快捷入口样式 */
+.quick-entry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: var(--background-primary) !important;
+    border: 1px solid var(--border-light);
+}
+
+.quick-entry:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
+}
+
+.quick-entry .icon-container {
+    width: 48px;
+    height: 48px;
+    background: var(--primary-light);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    box-shadow: none;
+}
+
+.quick-entry .icon-container svg {
+    stroke: var(--primary-color) !important;
+}
+
+.quick-entry span {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary) !important;
+}
+
+/* 待办任务样式 */
+.task-list {
+    space-y: 12px;
+}
+
+.task-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.task-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.05);
+}
+
+.task-item .task-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin: 0 0 4px 0;
+}
+
+.task-item .task-meta {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    margin: 0 0 8px 0;
+}
+
+.task-item .task-tags {
+    display: flex;
+    gap: 8px;
+}
+
+/* 审核队列样式 */
+.review-queue {
+    space-y: 12px;
+}
+
+.queue-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.queue-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.05);
+}
+
+.queue-item h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin: 0 0 4px 0;
+}
+
+.queue-item p {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    margin: 0;
+}
+
+/* 最近动态样式 */
+.activity-list {
+    space-y: 12px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px;
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.activity-item:hover {
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+}
+
+.activity-item .activity-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.activity-item p {
+    margin: 0;
+}
+
+.activity-item .activity-content {
+    font-size: 14px;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.activity-item .activity-meta {
+    font-size: 12px;
+    color: var(--text-tertiary);
+}
+
+/* 风控预警样式 */
+.risk-alert {
+    space-y: 12px;
+}
+
+.alert-item {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.alert-item:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.alert-item h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 8px 0;
+}
+
+.alert-item p {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.alert-item .alert-time {
+    font-size: 12px;
+    color: var(--text-tertiary);
+}
+
+/* 紧急任务样式 */
+.task-item.urgent {
+    background: #fffbeb;
+    border-color: #fef3c7;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .quick-entry {
+        padding: 12px;
+    }
+    
+    .quick-entry .icon-container {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .quick-entry span {
+        font-size: 12px;
+    }
+    
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .task-item .action-btn {
+        align-self: flex-end;
+    }
+    
+    .queue-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .queue-item .status-tag {
+        align-self: flex-end;
+    }
+}

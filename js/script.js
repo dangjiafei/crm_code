@@ -38,6 +38,8 @@ function getBusinessModule() {
         return '/js/customer.js';
     } else if (pathname.includes('activity')) {
         return '/js/activity.js';
+    } else if (pathname.includes('index') || pathname.endsWith('/')) {
+        return '/js/home.js';
     } else {
         return null;
     }
@@ -85,6 +87,10 @@ function initBusinessModule() {
     } else if (pathname.includes('customer')) {
         if (typeof initCustomerModule === 'function') {
             initCustomerModule();
+        }
+    } else if (pathname.includes('index') || pathname.endsWith('/')) {
+        if (typeof initHomePage === 'function') {
+            initHomePage();
         }
     }
 }
